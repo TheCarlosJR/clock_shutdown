@@ -1,0 +1,274 @@
+object Form1: TForm1
+  Left = 356
+  Height = 206
+  Top = 145
+  Width = 380
+  Caption = 'Clock Turnoff - Undefined'
+  ClientHeight = 206
+  ClientWidth = 380
+  Color = 11396077
+  Constraints.MinHeight = 206
+  Constraints.MinWidth = 380
+  OnClick = FormClick
+  OnResize = FormResize
+  Position = poDesktopCenter
+  SessionProperties = 'LblHour.Caption;LblMin.Caption;LblSec.Caption'
+  LCLVersion = '2.2.6.0'
+  object GIFViewer2: TGIFViewer
+    Left = 236
+    Height = 200
+    Top = 65
+    Width = 200
+    Color = clNone
+    Border = False
+    BorderColor = clBlack
+    BorderWidth = 1
+    BevelColor = clBlack
+    BevelOuter = bvNone
+    AutoPlay = True
+    Transparent = True
+    Center = True
+    AutoStretchMode = smManual
+    Stretch = False
+    FileName = 'E:\Documentos\Meus Arquivos\Desenvolvedor\Delphi\Lazarus\Multi\ClockShutdown\img\wired-flat-45-clock-time200_2.gif'
+    DisplayInvalidFrames = False
+    AutoRemoveInvalidFrame = True
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+    Visible = False
+  end
+  object Edit1: TEdit
+    Left = 48
+    Height = 76
+    Top = 60
+    Width = 60
+    Color = 5609972
+    Font.Height = -51
+    MaxLength = 2
+    NumbersOnly = True
+    OnEditingDone = Edit1EditingDone
+    OnExit = Edit1Exit
+    OnKeyUp = Edit1KeyUp
+    ParentFont = False
+    TabStop = False
+    TabOrder = 2
+    Text = '00'
+    Visible = False
+  end
+  object GIFViewer1: TGIFViewer
+    Left = 236
+    Height = 200
+    Top = 65
+    Width = 200
+    Color = clNone
+    Border = False
+    BorderColor = clBlack
+    BorderWidth = 1
+    BevelColor = clBlack
+    BevelOuter = bvNone
+    AutoPlay = True
+    Transparent = True
+    Center = True
+    AutoStretchMode = smManual
+    Stretch = False
+    FileName = 'E:\Documentos\Meus Arquivos\Desenvolvedor\Delphi\Lazarus\Multi\ClockShutdown\img\wired-flat-45-clock-time200.gif'
+    DisplayInvalidFrames = False
+    AutoRemoveInvalidFrame = True
+    Anchors = [akRight, akBottom]
+    AutoSize = True
+  end
+  object Label1: TLabel
+    Cursor = crHandPoint
+    Left = 8
+    Height = 15
+    Top = 184
+    Width = 179
+    Anchors = [akLeft, akBottom]
+    Caption = 'Animated icons by Lordicon.com'
+    Font.Color = 12027166
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
+    OnMouseEnter = Label1MouseEnter
+    OnMouseLeave = Label1MouseLeave
+  end
+  object PanelClock: TPanel
+    Left = 72
+    Height = 86
+    Top = 56
+    Width = 237
+    ClientHeight = 86
+    ClientWidth = 237
+    TabOrder = 0
+    OnClick = PanelClockClick
+    object LblHour: TLabel
+      Tag = 1
+      Left = 23
+      Height = 68
+      Top = 4
+      Width = 54
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '00'
+      Font.Color = clBlack
+      Font.Height = -51
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      OnDblClick = LblHourDblClick
+    end
+    object Lbl1: TLabel
+      Left = 77
+      Height = 68
+      Top = 5
+      Width = 11
+      Alignment = taCenter
+      Caption = ':'
+      Font.Color = clBlack
+      Font.Height = -51
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+    end
+    object LblMin: TLabel
+      Tag = 2
+      Left = 91
+      Height = 68
+      Top = 4
+      Width = 54
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '00'
+      Font.Color = clBlack
+      Font.Height = -51
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      OnDblClick = LblHourDblClick
+    end
+    object Lbl2: TLabel
+      Left = 146
+      Height = 68
+      Top = 4
+      Width = 11
+      Alignment = taCenter
+      Caption = ':'
+      Font.Color = clBlack
+      Font.Height = -51
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+    end
+    object LblSec: TLabel
+      Tag = 3
+      Left = 159
+      Height = 68
+      Top = 4
+      Width = 54
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '00'
+      Font.Color = clBlack
+      Font.Height = -51
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      OnDblClick = LblHourDblClick
+    end
+    object TgHour: TToggleBox
+      Tag = 1
+      Left = 23
+      Height = 12
+      Hint = 'Enable specific Hour'
+      Top = 73
+      Width = 54
+      Anchors = [akLeft, akBottom]
+      OnClick = TgHourClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      TabStop = False
+    end
+    object TgMin: TToggleBox
+      Tag = 2
+      Left = 91
+      Height = 12
+      Hint = 'Enable specific Minute'
+      Top = 73
+      Width = 54
+      Anchors = [akLeft, akBottom]
+      OnClick = TgHourClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 1
+      TabStop = False
+    end
+    object TgSec: TToggleBox
+      Tag = 3
+      Left = 159
+      Height = 12
+      Hint = 'Enable specific Second'
+      Top = 73
+      Width = 54
+      Anchors = [akLeft, akBottom]
+      OnClick = TgHourClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      TabStop = False
+    end
+    object BtnClear: TBitBtn
+      Left = 215
+      Height = 22
+      Hint = 'Cancel and Disable all'
+      Top = 0
+      Width = 22
+      Anchors = [akTop, akRight]
+      Caption = 'X'
+      Enabled = False
+      OnClick = BtnClearClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 3
+    end
+  end
+  object BtnCalc: TBitBtn
+    Left = 230
+    Height = 22
+    Hint = 'Give the hours, minutes and seconds to sum with actual time'
+    Top = 6
+    Width = 144
+    Anchors = [akTop, akRight]
+    Caption = 'Calculate time from now'
+    OnClick = BtnCalcClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    TabStop = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 8
+    Top = 8
+  end
+  object TaskDialog1: TTaskDialog
+    Buttons = <>
+    CommonButtons = [tcbYes, tcbNo]
+    DefaultButton = tcbNo
+    MainIcon = tdiWarning
+    RadioButtons = <>
+    Text = 'Accepting this will setup the timer that will SHUTDOWN your computer'
+    Title = 'Setup shutdown timer?'
+    Left = 40
+    Top = 8
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'config.ini'
+    IniSection = 'time'
+    Left = 72
+    Top = 8
+  end
+end
